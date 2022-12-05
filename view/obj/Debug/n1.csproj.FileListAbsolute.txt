@@ -1,0 +1,57 @@
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\bin\Debug\n1.exe.config
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\bin\Debug\n1.exe
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\bin\Debug\n1.pdb
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\obj\Debug\n1.csproj.AssemblyReference.cache
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\obj\Debug\n1.csproj.SuggestedBindingRedirects.cache
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\obj\Debug\n1.Form1.resources
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\obj\Debug\n1.Properties.Resources.resources
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\obj\Debug\n1.csproj.GenerateResource.cache
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\obj\Debug\n1.csproj.CoreCompileInputs.cache
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\obj\Debug\n1.exe
+C:\Users\손현아\Desktop\학교\2학년 2학기\비주얼 프로그래밍\팀프로젝트\화면\n1\n1\obj\Debug\n1.pdb
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\n1.exe.config
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\n1.exe
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\n1.pdb
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.csproj.AssemblyReference.cache
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.csproj.SuggestedBindingRedirects.cache
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.Form1.resources
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.Properties.Resources.resources
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.csproj.GenerateResource.cache
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.csproj.CoreCompileInputs.cache
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.exe
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.pdb
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\MySql.Data.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\Google.Protobuf.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\ZstdNet.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\System.Memory.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\System.Buffers.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\bin\Debug\MySql.Data.xml
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.exe.config
+C:\Users\hwang\source\repos\C#\Inventory-MGMT\view\obj\Debug\n1.csproj.CopyComplete
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\n1.exe.config
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\n1.exe
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\n1.pdb
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\MySql.Data.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\Google.Protobuf.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\ZstdNet.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\System.Memory.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\System.Buffers.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\bin\Debug\MySql.Data.xml
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.csproj.AssemblyReference.cache
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.csproj.SuggestedBindingRedirects.cache
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.exe.config
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.Form1.resources
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.Properties.Resources.resources
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.csproj.GenerateResource.cache
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.csproj.CoreCompileInputs.cache
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.csproj.CopyComplete
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.exe
+C:\Users\hwang\source\repos\Csharp-InventoryMenagement\view\obj\Debug\n1.pdb
