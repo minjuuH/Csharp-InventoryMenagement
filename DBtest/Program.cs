@@ -15,15 +15,15 @@ namespace DBtest
         {
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
-            string query = "select * from warehousing";
+            string query = "select * from item_info";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataReader r = cmd.ExecuteReader();
 
-            string[] fields = new string[11];
+            string[] fields = new string[8];
 
             while (r.Read())
             {
-                for(int i=0; i<11; i++)
+                for(int i=0; i<8; i++)
                 {
                     fields[i] = r[i].ToString();
                     Console.Write($" {fields[i]}");
@@ -83,6 +83,18 @@ namespace DBtest
 
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
+
+            string query;
+            //query = "Insert into item_info (Code, Item, In_price, Out_price)" +
+            //    String.Format("values (11115, \"햇반\", 1500, 2000)");
+
+            //전체재고 수정
+            int count = AllCount(connStr, 11115);
+            query = String.Format("update item_info set Allcount={0} where Code=11115", count);
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
 
             LoadList(connStr);
             AllCount(connStr, 11111);

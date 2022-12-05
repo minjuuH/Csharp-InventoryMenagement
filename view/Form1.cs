@@ -27,8 +27,8 @@ namespace n1
             this.dataGridView1.Visible = true;
             this.dataGridView2.Visible = false;
 
-            DataTable inoutTable = dbclass.LoadDT();
-            DataTable allTable;
+            DataTable inoutTable = dbclass.LoadDT("select * from warehousing");
+            DataTable allTable = dbclass.LoadDT("select * from item_info");
             inoutTable.Columns.RemoveAt(0);
 
             foreach (DataRow dr in inoutTable.Rows)
@@ -40,13 +40,11 @@ namespace n1
             }
 
             //dataGridView1.Columns.Clear();    //그리드뷰 columns을 다 비워주는 코드
+
+            //입출고 데이터
             dataGridView1.DataSource = inoutTable;
 
-            allTable = inoutTable.Copy();
-            allTable.Columns.Remove("Date");
-            allTable.Columns.Remove("In_out");
-            allTable.Columns.Remove("Count");
-            allTable.Columns.Remove("Defect");
+            //전체 재고 데이터            
             dataGridView2.DataSource = allTable;
         }
         //입출고내역 버튼 클릭시

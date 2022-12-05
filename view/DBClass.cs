@@ -39,8 +39,10 @@ namespace n1
             return r;
         }
 
-        public DataTable LoadDT()
+        //GridView에 전달할 데이터테이블 반환
+        public DataTable LoadDT(string strSql)
         {
+            //string strSql = 반환할 데이터베이스 테이블 선택
             DataTable dt = null;
             try
             {
