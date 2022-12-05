@@ -12,32 +12,7 @@ namespace n1
     internal class DBClass
     {
         string strCon = "Server=localhost;Uid=root;Database=inventory-mgmt;port=3306;pwd=minju#db00";
-        string strSql = "select * from warehousing";
-
-        //데이터베이스 출력
-        public MySqlDataReader LoadList(string connStr)
-        {
-            MySqlConnection conn = new MySqlConnection(connStr);
-            conn.Open();
-            string query = strSql;
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            MySqlDataReader r = cmd.ExecuteReader();
-
-            string[] fields = new string[11];
-
-            while (r.Read())
-            {
-                for (int i = 0; i < 11; i++)
-                {
-                    fields[i] = r[i].ToString();
-                    Console.Write($" {fields[i]}");
-                }
-            }
-
-            conn.Close();
-
-            return r;
-        }
+        //string strSql = "select * from warehousing";
 
         //GridView에 전달할 데이터테이블 반환
         public DataTable LoadDT(string strSql)
@@ -78,6 +53,24 @@ namespace n1
                 MessageBox.Show(ex.Message);
                 return dt;
             }
+        }
+
+        //입출고데이터베이스에 사용할 인덱스 번호 추출
+        public int NewNumber(string connStr)
+        {
+            MySqlConnection conn = new MySqlConnection(strCon);
+            conn.Open();
+            string query = "select max(Number) from warehousing";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader r = cmd.ExecuteReader();
+            r.Read();
+
+            int number = 1;
+            if (r[0].ToString().Length > 0)
+                number = int.Parse(r[0].ToString()) + 1;
+
+            r.Close();
+            return number;
         }
     }
 }
