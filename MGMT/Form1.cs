@@ -107,7 +107,11 @@ namespace n1
         private void button5_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            form2.ShowDialog();
+            form2.Owner = this;
+
+            //form2에서 전송한 데이터 출력
+            if (form2.ShowDialog() == DialogResult.OK)
+                textBox1.Text = choiceitem;
         }
     }
 }

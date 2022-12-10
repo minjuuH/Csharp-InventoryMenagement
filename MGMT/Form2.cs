@@ -60,7 +60,15 @@ namespace n1
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+            string choice = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " - " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            MessageBox.Show(choice);
+
+            DialogResult = DialogResult.OK;     //다이얼로그 결과
+
+            Form1 form1 = (Form1)Owner;
+            form1.choiceitem = choice;
+
+            this.Close();
         }
     }
 }
