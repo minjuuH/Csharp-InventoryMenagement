@@ -69,13 +69,12 @@ namespace n1
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string choice = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " - " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            MessageBox.Show(choice);
-
             DialogResult = DialogResult.OK;     //다이얼로그 결과
 
             Form1 form1 = (Form1)Owner;
-            form1.choiceitem = choice;
+            form1.choicecode = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            form1.choiceitem = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            form1.wholeitemTable = dbclass.LoadDT("select * from item_info");
 
             this.Close();
         }

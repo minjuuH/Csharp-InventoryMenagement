@@ -54,7 +54,7 @@ namespace n1
             }
         }
 
-        //데이터베이스에 항목 추가
+        //데이터베이스에 항목 추가/수정
         public void insertDB(string query)
         {
             MySqlConnection conn = new MySqlConnection(strCon);
@@ -66,7 +66,7 @@ namespace n1
         }
 
         //입출고데이터베이스에 사용할 인덱스 번호 추출
-        public int NewNumber(string connStr)
+        public int NewNumber()
         {
             MySqlConnection conn = new MySqlConnection(strCon);
             conn.Open();

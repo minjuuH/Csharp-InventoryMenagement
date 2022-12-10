@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace n1
 {
@@ -16,13 +17,26 @@ namespace n1
 
         //데이터테이블 멤버
         DataTable wholeinoutTable;   //입출고 내역
-        DataTable wholeitemTable;     //전체재고
+        public DataTable wholeitemTable;     //전체재고
 
-        public string choiceitem;   //form2에서 받아올 전역변수
+        public string choiceitem, choicecode;   //form2에서 받아올 전역변수
 
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void setGridView()
+        {
+            wholeinoutTable = dbclass.LoadDT("select * from warehousing");
+            wholeitemTable = dbclass.LoadDT("select * from item_info");
+            wholeinoutTable.Columns.RemoveAt(0);    //인덱스 열 지워줌
+
+            //입출고 데이터
+            dataGridView1.DataSource = wholeinoutTable;
+
+            //전체 재고 데이터            
+            dataGridView2.DataSource = wholeitemTable;
         }
 
         // 실행했을 때
@@ -32,26 +46,10 @@ namespace n1
             this.button3.BackColor = Color.White;
             this.dataGridView1.Visible = true;
             this.dataGridView2.Visible = false;
+            dataGridView1.ScrollBars = ScrollBars.Vertical;
+            dataGridView2.ScrollBars = ScrollBars.Vertical;
 
-            wholeinoutTable = dbclass.LoadDT("select * from warehousing");
-            wholeitemTable = dbclass.LoadDT("select * from item_info");
-            wholeinoutTable.Columns.RemoveAt(0);    //인덱스 열 지워줌
-
-            //foreach (DataRow dr in inoutTable.Rows)
-            //{
-            //    if (dr["In_out"].ToString() == "1")
-            //        dr["In_out"] = "입고";
-            //    else if (dr["In_out"].ToString() == "0")
-            //        dr["In_out"] = "출고";
-            //}
-
-            //dataGridView1.Columns.Clear();    //그리드뷰 columns을 다 비워주는 코드
-
-            //입출고 데이터
-            dataGridView1.DataSource = wholeinoutTable;
-
-            //전체 재고 데이터            
-            dataGridView2.DataSource = wholeitemTable;
+            setGridView();
         }
 
         //입출고내역 버튼 클릭시
@@ -76,7 +74,47 @@ namespace n1
         //등록 버튼 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("등록할 내용을 입력하세요.", "등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            string query;
+            if(txtChoice.Text.Length==0)
+                MessageBox.Show("상품이 선택되지 않았습니다.", "등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (txtCount.Text.Length==0)
+                MessageBox.Show("수량은 필수 입력 사항입니다.", "등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                DataRow[] choices = wholeitemTable.Select($"Code = {choicecode}");
+                DataRow choice = choices[0];
+
+                string date, in_out;
+                if (txtDate.Text.Length==0)
+                    date = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+                else 
+                    date = txtDate.Text;
+
+                int count=(int)choice["Allcount"];
+                if (radioButton1.Checked)
+                {
+                    in_out = "입고";
+                    count += int.Parse(txtCount.Text);
+                }
+                else
+                {
+                    in_out = "출고";
+                    count -= int.Parse(txtCount.Text);
+                }
+
+                //입출고내역 추가
+                query = "Insert into warehousing (Number, Code, Item, Date, In_out, In_price, Out_price, Count, Business, Category)" +
+                    String.Format("values ({0}, {1}, \"{2}\", \"{3}\", \"{4}\", {5}, {6}, {7}, \"{8}\", \"{9}\")", 
+                    dbclass.NewNumber(), choice["Code"], choice["Item"], date, in_out, choice["In_price"], choice["Out_price"], txtCount.Text, choice["Business"], choice["Category"]);
+                dbclass.insertDB(query);
+
+                //전체재고 변동
+                dbclass.insertDB($"update item_info set Allcount={count} where Code={choicecode}");
+
+                //변경된 데이터베이스 화면에 반영
+                setGridView();
+                txtChoice.Text = ""; txtCount.Text = ""; txtDate.Text = "";
+            }
         }
 
         //검색 버튼
@@ -111,7 +149,7 @@ namespace n1
 
             //form2에서 전송한 데이터 출력
             if (form2.ShowDialog() == DialogResult.OK)
-                textBox1.Text = choiceitem;
+                txtChoice.Text = choicecode + " - " + choiceitem;
         }
     }
 }
