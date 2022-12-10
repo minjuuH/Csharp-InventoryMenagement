@@ -77,24 +77,41 @@ namespace DBtest
             return count;
         }
 
-        static void Main(string[] args)
+        public static void insertDB(string query)
         {
             string connStr = "Server=localhost;Uid=root;Database=inventory-mgmt;port=3306;pwd=minju#db00";
 
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
 
-            string query;
-            //query = "Insert into item_info (Code, Item, In_price, Out_price)" +
-            //    String.Format("values (11115, \"햇반\", 1500, 2000)");
-
-            //전체재고 수정
-            int count = AllCount(connStr, 11115);
-            query = String.Format("update item_info set Allcount={0} where Code=11115", count);
-
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
+        }
+
+        static void Main(string[] args)
+        {
+            string connStr = "Server=localhost;Uid=root;Database=inventory-mgmt;port=3306;pwd=minju#db00";
+
+            //MySqlConnection conn = new MySqlConnection(connStr);
+            //conn.Open();
+
+            string query;
+            var today = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+            query = "Insert into warehousing (Number, Code, Item, Date, In_price, Out_price, Category)" +
+                String.Format("values (5, 12015, \"누룽지\", \"{0}\", 2000, 2800, \"곡류가공품\")", today);
+
+            insertDB(query);
+
+            //전체재고 수정
+            //int count = AllCount(connStr, 11115);
+            //query = String.Format("update item_info set Allcount={0} where Code=11115", count);
+
+            //MySqlCommand cmd = new MySqlCommand(query, conn);
+            //cmd.ExecuteNonQuery();
+            //conn.Close();
+
+            Console.WriteLine(today);
 
             LoadList(connStr);
             AllCount(connStr, 11111);
