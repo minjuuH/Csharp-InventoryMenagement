@@ -28,12 +28,17 @@ namespace n1
                 table.Columns.Remove(s);
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        public void setDB()
         {
             itemTable = dbclass.LoadDT("select * from item_info");
             setTable(itemTable);
-            
+
             dataGridView1.DataSource = itemTable;
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            setDB();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -55,7 +60,11 @@ namespace n1
         private void button2_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
-            form3.ShowDialog();
+            form3.Owner = this;
+
+            //form2에서 전송한 데이터 출력
+            if (form3.ShowDialog() == DialogResult.OK)
+                setDB();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -12,7 +12,6 @@ namespace n1
     internal class DBClass
     {
         string strCon = "Server=localhost;Uid=root;Database=inventory-mgmt;port=3306;pwd=minju#db00";
-        //string strSql = "select * from warehousing";
 
         //GridView에 전달할 데이터테이블 반환
         public DataTable LoadDT(string strSql)
@@ -53,6 +52,17 @@ namespace n1
                 MessageBox.Show(ex.Message);
                 return dt;
             }
+        }
+
+        //데이터베이스에 항목 추가
+        public void insertDB(string query)
+        {
+            MySqlConnection conn = new MySqlConnection(strCon);
+            conn.Open();
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         //입출고데이터베이스에 사용할 인덱스 번호 추출

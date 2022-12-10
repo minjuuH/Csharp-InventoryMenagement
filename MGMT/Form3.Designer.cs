@@ -34,110 +34,122 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtItem = new System.Windows.Forms.TextBox();
+            this.txtInprice = new System.Windows.Forms.TextBox();
+            this.txtOutprice = new System.Windows.Forms.TextBox();
+            this.txtBusiness = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 33);
+            this.label1.Location = new System.Drawing.Point(41, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(80, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "상품코드";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 70);
+            this.label2.Location = new System.Drawing.Point(50, 105);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.Size = new System.Drawing.Size(62, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "제품명";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 108);
+            this.label3.Location = new System.Drawing.Point(41, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "입고단가";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 146);
+            this.label4.Location = new System.Drawing.Point(41, 219);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "출고단가";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 185);
+            this.label5.Location = new System.Drawing.Point(50, 278);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.Size = new System.Drawing.Size(62, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "거래처";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 223);
+            this.label6.Location = new System.Drawing.Point(59, 334);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.Size = new System.Drawing.Size(44, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "분류";
             // 
-            // textBox1
+            // txtCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 21);
-            this.textBox1.TabIndex = 6;
+            this.txtCode.Location = new System.Drawing.Point(143, 44);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(191, 28);
+            this.txtCode.TabIndex = 6;
             // 
-            // textBox2
+            // txtItem
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 21);
-            this.textBox2.TabIndex = 7;
+            this.txtItem.Location = new System.Drawing.Point(143, 99);
+            this.txtItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtItem.Name = "txtItem";
+            this.txtItem.Size = new System.Drawing.Size(191, 28);
+            this.txtItem.TabIndex = 7;
             // 
-            // textBox3
+            // txtInprice
             // 
-            this.textBox3.Location = new System.Drawing.Point(100, 104);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 21);
-            this.textBox3.TabIndex = 8;
+            this.txtInprice.Location = new System.Drawing.Point(143, 156);
+            this.txtInprice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInprice.Name = "txtInprice";
+            this.txtInprice.Size = new System.Drawing.Size(191, 28);
+            this.txtInprice.TabIndex = 8;
             // 
-            // textBox4
+            // txtOutprice
             // 
-            this.textBox4.Location = new System.Drawing.Point(100, 142);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(135, 21);
-            this.textBox4.TabIndex = 9;
+            this.txtOutprice.Location = new System.Drawing.Point(143, 213);
+            this.txtOutprice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOutprice.Name = "txtOutprice";
+            this.txtOutprice.Size = new System.Drawing.Size(191, 28);
+            this.txtOutprice.TabIndex = 9;
             // 
-            // textBox5
+            // txtBusiness
             // 
-            this.textBox5.Location = new System.Drawing.Point(100, 181);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(135, 21);
-            this.textBox5.TabIndex = 10;
+            this.txtBusiness.Location = new System.Drawing.Point(143, 272);
+            this.txtBusiness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBusiness.Name = "txtBusiness";
+            this.txtBusiness.Size = new System.Drawing.Size(191, 28);
+            this.txtBusiness.TabIndex = 10;
             // 
-            // textBox6
+            // txtCategory
             // 
-            this.textBox6.Location = new System.Drawing.Point(100, 219);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(135, 21);
-            this.textBox6.TabIndex = 11;
+            this.txtCategory.Location = new System.Drawing.Point(143, 328);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(191, 28);
+            this.txtCategory.TabIndex = 11;
             // 
             // button1
             // 
@@ -145,9 +157,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(100, 261);
+            this.button1.Location = new System.Drawing.Point(143, 392);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.Size = new System.Drawing.Size(107, 48);
             this.button1.TabIndex = 12;
             this.button1.Text = "등록";
             this.button1.UseVisualStyleBackColor = false;
@@ -155,16 +168,16 @@
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 314);
+            this.ClientSize = new System.Drawing.Size(383, 471);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCategory);
+            this.Controls.Add(this.txtBusiness);
+            this.Controls.Add(this.txtOutprice);
+            this.Controls.Add(this.txtInprice);
+            this.Controls.Add(this.txtItem);
+            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -172,6 +185,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form3";
             this.Text = "재고 관리 프로그램";
             this.ResumeLayout(false);
@@ -187,12 +201,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtItem;
+        private System.Windows.Forms.TextBox txtInprice;
+        private System.Windows.Forms.TextBox txtOutprice;
+        private System.Windows.Forms.TextBox txtBusiness;
+        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Button button1;
     }
 }
